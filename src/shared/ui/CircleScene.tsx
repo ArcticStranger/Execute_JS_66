@@ -1,0 +1,142 @@
+// WebGL не поддерживается в этой среде - используем статический фон
+export const CircleScene = () => {
+  return (
+    <div style={{ 
+      position: 'fixed', 
+      top: 0, 
+      left: 180, 
+      width: '100vw', 
+      height: '100vh',
+      zIndex: -1,
+      background: 'linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden'
+    }}>
+      {/* Декоративный sci-fi элемент - анимированные кольца */}
+      <div style={{
+        position: 'relative',
+        width: '400px',
+        height: '400px',
+        animation: 'pulse 4s ease-in-out infinite'
+      }}>
+        {/* Outer ring */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '300px',
+          height: '300px',
+          border: '2px solid rgba(0, 255, 255, 0.3)',
+          borderRadius: '50%',
+          animation: 'rotate 20s linear infinite'
+        }} />
+        
+        {/* Middle ring */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '200px',
+          height: '200px',
+          border: '2px solid rgba(255, 0, 255, 0.4)',
+          borderRadius: '50%',
+          animation: 'rotate-reverse 15s linear infinite'
+        }} />
+        
+        {/* Inner ring */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '100px',
+          height: '100px',
+          border: '3px solid rgba(0, 255, 255, 0.6)',
+          borderRadius: '50%',
+          boxShadow: '0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 20px rgba(0, 255, 255, 0.2)',
+          animation: 'pulse 2s ease-in-out infinite'
+        }} />
+        
+        {/* Center glow */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '50px',
+          height: '50px',
+          background: 'radial-gradient(circle, rgba(0, 255, 255, 0.8) 0%, transparent 70%)',
+          borderRadius: '50%',
+          animation: 'blink 1s ease-in-out infinite'
+        }} />
+      </div>
+      
+      {/* Orbiting JS Icon */}
+      <div style={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        width: '40px',
+        height: '40px',
+        marginTop: '-20px',
+        marginLeft: '-20px',
+        animation: 'orbit-js 8s linear infinite',
+        filter: 'drop-shadow(0 0 8px rgba(247, 223, 30, 0.9))'
+      }}>
+        <svg viewBox="0 0 24 24" fill="#f7df1e" width="40" height="40">
+          <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+        </svg>
+      </div>
+      
+      {/* Orbiting TS Icon */}
+      <div style={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        width: '40px',
+        height: '40px',
+        marginTop: '-20px',
+        marginLeft: '-20px',
+        animation: 'orbit-ts 8s linear infinite 4s',
+        filter: 'drop-shadow(0 0 8px rgba(49, 120, 198, 0.9))'
+      }}>
+        <svg viewBox="0 0 40 40" width="40" height="40">
+          <rect x="2" y="2" width="36" height="36" rx="6" fill="#3178c6"/>
+          <text x="20" y="27" fontFamily="Arial, sans-serif" fontSize="20" fontWeight="bold" fill="white" textAnchor="middle">TS</text>
+        </svg>
+      </div>
+      
+      {/* CSS Animations */}
+      <style>{`
+        @keyframes rotate {
+          from { transform: translate(-50%, -50%) rotate(0deg); }
+          to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes rotate-reverse {
+          from { transform: translate(-50%, -50%) rotate(360deg); }
+          to { transform: translate(-50%, -50%) rotate(0deg); }
+        }
+        @keyframes pulse {
+          0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+          50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+        }
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+        @keyframes orbit-js {
+          from { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+          to { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+        }
+        @keyframes orbit-ts {
+          from { transform: rotate(180deg) translateX(160px) rotate(-180deg); }
+          to { transform: rotate(540deg) translateX(160px) rotate(-540deg); }
+        }
+      `}</style>
+    </div>
+  );
+};
