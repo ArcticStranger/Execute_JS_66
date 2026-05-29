@@ -3,6 +3,8 @@ import htmlcssImg from '../../assets/cards/htmlcss.jpg'
 import jsBaseImg from '../../assets/cards/jsBase.jpg'
 import jsAdvancedImg from '../../assets/cards/jsAdvanced.jpg'
 
+import { Link } from 'react-router-dom'
+
 interface Card {
   id: number
   title: string
@@ -66,6 +68,7 @@ export const HomePage = () => {
       
 <div className="grid grid-cols-3 gap-4 p-4">
          {cards.map((card) => (
+         
         <div
           key={card.id}
           className="
@@ -77,6 +80,11 @@ export const HomePage = () => {
             bg-white
           "
         >
+          <Link
+            key={card.id}
+            to={`/${card.id}`}
+            className="border rounded-2x1 p-6"
+          >
           <img
             src={card.image}
             alt={card.title}
@@ -86,13 +94,15 @@ export const HomePage = () => {
               object-cover
             "
           />
-
+ </Link>
           <div className="p-4">
             <h2 className="text-xl font-semibold text-black-500">
               {card.title}
             </h2>
+           
           </div>
         </div>
+        
       ))}
        </div>
     </>
