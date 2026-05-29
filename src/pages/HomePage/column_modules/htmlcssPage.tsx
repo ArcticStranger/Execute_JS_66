@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const HtmlCssPage: React.FC = () => {
   return (
@@ -6,7 +6,7 @@ export const HtmlCssPage: React.FC = () => {
       <h1>HTML/CSS Page</h1>
       <p>This is the HTML/CSS reference page.</p>
     </div>
-  );
-};
+  )
+}
 
-export default HtmlCssPage;
+export default HtmlCssPage
