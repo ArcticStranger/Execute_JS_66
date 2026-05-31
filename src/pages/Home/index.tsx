@@ -9,7 +9,7 @@ export const HomePage = () => {
 
       <main className="relative z-10 pt-[58vh] pb-12">
         <h1>Курс-обучалка по JS/TS</h1>
-
+        <p>TG: @AtlasovT_Marlysma</p>
         <div className="grid grid-cols-3 gap-4 p-4">
           {courseCards.map((card) => (
             <CourseCard key={card.id} card={card} />

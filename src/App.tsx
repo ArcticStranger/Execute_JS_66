@@ -7,11 +7,12 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<Navigate to="/home" replace />} />
+      <Route path="/home" element={<HomePage />} />
       <Route path="/htmlcss" element={<HtmlCssPage />} />
       <Route path="/jsbase" element={<JsBasePage />} />
       <Route path="/jsadvanced" element={<JsAdvancedPage />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
   )
 }
