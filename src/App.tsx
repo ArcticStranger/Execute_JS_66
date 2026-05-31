@@ -1,7 +1,7 @@
-import { HomePage } from './pages/HomePage'
-import { HtmlCssPage } from './pages/HomePage/column_modules/htmlcssPage'
-import { JsBasePage } from './pages/HomePage/column_modules/jsBasePage'
-import { JsAdvancedPage } from './pages/HomePage/column_modules/jsAdvancedPage'
+import { HomePage } from './pages/Home'
+import { HtmlCssPage } from './pages/htmlcss/index.tsx'
+import { JsBasePage } from './pages/jsBase/index.tsx'
+import { JsAdvancedPage } from './pages/jsAdvanced/index.tsx'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {

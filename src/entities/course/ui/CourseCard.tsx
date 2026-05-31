@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import type { CourseCard as CourseCardType } from '../../entities/course/course.types'
+import type { CourseCard as CourseCardType } from '../course.types'
 
 interface Props {
   card: CourseCardType
