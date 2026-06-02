@@ -3,11 +3,11 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #ffffff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-bg: rgba(207, 197, 215, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
@@ -35,7 +35,7 @@
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
-    --bg: #16171d;
+    --bg: #2a1151;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
@@ -108,4 +108,22 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.course-steps.ant-steps .ant-steps-item-process .ant-steps-item-icon {
+  background-color: rgb(202, 226, 16) !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+
+.course-steps.ant-steps .ant-steps-item-wait .ant-steps-item-icon {
+  background-color: #ff0000 !important;
+  color: rgb(0, 0, 0) !important;
+  font-weight: 700 !important;
+}
+
+.course-steps.ant-steps .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: #22c55e !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
 }

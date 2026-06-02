@@ -5,11 +5,10 @@ export const CircleScene = () => {
       style={{
         position: 'fixed',
         top: 0,
-        left: 190,
+        left: 0,
         width: '100vw',
         height: '100vh',
         zIndex: -1,
-        background: 'linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
