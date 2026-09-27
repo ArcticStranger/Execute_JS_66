@@ -7,14 +7,15 @@ interface Props {
 
 export const CourseCard = ({ card }: Props) => {
   return (
-    <div className="rounded-2xl overflow-hidden border border-zinc-200 shadow-sm bg-white">
-      <Link to={card.path} className="border rounded-2x1 p-6">
-        <img src={card.image} alt={card.title} className="w-full h-48 object-cover" />
-      </Link>
-
-      <div className="p-4">
-        <h2 className="text-xl font-semibold text-black-500">{card.title}</h2>
-      </div>
-    </div>
+    <Link to={card.path} className="course-card" aria-label={`Открыть курс ${card.title}`}>
+      <img src={card.image} alt="" className="course-card__image" />
+      <span className="course-card__content">
+        <span className="course-card__eyebrow">Учебный блок</span>
+        <span className="course-card__title">{card.title}</span>
+        <span className="course-card__action">
+          Открыть курс <span aria-hidden="true">→</span>
+        </span>
+      </span>
+    </Link>
   )
 }

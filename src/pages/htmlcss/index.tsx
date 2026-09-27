@@ -60,17 +60,20 @@ const items = lessons.map((lesson) => ({
 
 export const HtmlCssPage: React.FC = () => {
   return (
-    <div>
+    <main className="course-page">
       <CourseHeader />
-      <h1>HTML/CSS Page</h1>
-      <p>This is the HTML/CSS reference page.</p>
+      <section className="course-page__content">
+        <p className="home-page__kicker">Основы вёрстки</p>
+        <h1>HTML/CSS</h1>
+        <p>Здесь собраны материалы и упражнения по HTML и CSS.</p>
 
-      <Flex>
-        <div style={{ flex: 1 }}>
-          <Steps className="course-steps" orientation="vertical" items={items} />
-        </div>
-      </Flex>
-    </div>
+        <Flex className="course-page__lessons">
+          <div style={{ flex: 1 }}>
+            <Steps className="course-steps" orientation="vertical" items={items} />
+          </div>
+        </Flex>
+      </section>
+    </main>
   )
 }
 

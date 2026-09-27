@@ -1,4 +1,4 @@
-import type { Lesson } from '../../entities/lesson/lesson.types'
+import type { Lesson } from '../../../entities/lesson/lesson.types'
 import type { LessonsState } from './lessons.types'
 
 const initialState: LessonsState = {
@@ -13,7 +13,7 @@ export const lessonsReducer = (
   action: {
     type: string
     payload?: unknown
-  }
+  },
 ): LessonsState => {
   switch (action.type) {
     case 'lessons/setLessons': {

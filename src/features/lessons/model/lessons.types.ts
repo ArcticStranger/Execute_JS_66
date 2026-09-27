@@ -1,4 +1,4 @@
-import type { Lesson } from '../../entities/lesson/lesson.types'
+import type { Lesson } from '../../../entities/lesson/lesson.types'
 
 export type LessonsStatus = 'idle' | 'loading' | 'success' | 'error'
 

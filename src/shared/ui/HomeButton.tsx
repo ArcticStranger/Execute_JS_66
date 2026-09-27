@@ -3,11 +3,7 @@ import { CaretLeftOutlined } from '@ant-design/icons'
 
 export const HomeButton = () => {
   return (
-    <Link
-      to="/home"
-      className="rounded-lg 
-      bg-zinc-900 px-4 py-2 text-white hover:bg-zinc-700"
-    >
+    <Link to="/home" className="home-button">
       <CaretLeftOutlined />
       Назад на главную
     </Link>

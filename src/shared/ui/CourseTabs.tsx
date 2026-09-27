@@ -1,6 +1,3 @@
-import { Tabs } from 'antd'
-import type { TabsProps } from 'antd'
-
 type CourseTab = {
   key: string
   label: string
@@ -12,10 +9,23 @@ type CourseTabsProps = {
   onChange: (key: string) => void
 }
 export const CourseTabs = ({ items, activeKey, onChange }: CourseTabsProps) => {
-  const tabItems: TabsProps['items'] = items.map((item) => ({
-    key: item.key,
-    label: <span className="text-white">{item.label}</span>,
-  }))
-
-  return <Tabs activeKey={activeKey} items={tabItems} onChange={onChange} />
+  return (
+    <nav className="course-tabs" aria-label="Навигация по курсам">
+      {items.map((item) => (
+        <button
+          key={item.key}
+          type="button"
+          className={
+            item.key === activeKey
+              ? 'course-tabs__item course-tabs__item--active'
+              : 'course-tabs__item'
+          }
+          aria-current={item.key === activeKey ? 'page' : undefined}
+          onClick={() => onChange(item.key)}
+        >
+          {item.label}
+        </button>
+      ))}
+    </nav>
+  )
 }
